@@ -1,0 +1,120 @@
+body {
+  background: #151517;
+}
+
+/* NAVBAR */
+.navbar {
+  font-family: Oswald;
+  letter-spacing: 2px;
+  margin: 1em 3em 2em 3em;
+  width: calc(100% - 6em);
+}
+
+.navbar h3 {
+  font-weight: 400;
+  color: #FEFEFE;
+}
+
+.navbar h3, div {
+  display: inline-block;
+}
+
+.navbar .categories {
+  float: right;
+}
+
+.navbar .category {
+  margin: 1em;
+  cursor: pointer;
+}
+
+/* STATES */
+
+.navbar .category:hover {
+  color: #848B93;
+}
+
+/* CONTENT HOMEPAGE*/
+
+.content {
+  font-family: Didot;
+  color: #848B93;
+  margin: auto 3em;
+}
+
+.content .highlight{
+  color: #FEFEFE;
+}
+
+.content h1, h4 {
+  margin: .5em auto;
+}
+
+.content h3, h4 {
+  font-family: Oswald;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.content .selected-projects-content {
+  width: 100%;
+}
+
+.content .pagesection {
+  margin: 2em auto;
+  width: 75%;
+}
+
+.content .pagesection:nth-child(even) {
+  float: right;
+}
+
+.pagesection-content {
+  width: 100%;
+}
+
+.content .pagesection-content h1, .content .pagesection-content h4 {
+  display: inline;
+}
+
+.project {
+  cursor: pointer;
+}
+
+.project .heading-container {
+  width: 100%;
+}
+
+.project .collapse-icon {
+  background-image: url('img/rightArrow.png');
+  width: 35px;
+  height: 20px;
+}
+
+/* INTRODUCTION */
+.content .introduction .work:hover {
+  color: #FEFEFE;
+  cursor: pointer;
+}
+
+/* WORK */
+
+.project {
+  display: block;
+  padding: .5em 0;
+  border-bottom: #FEFEFE solid 1px;
+}
+
+.project>.description {
+  display: none;
+}
+
+/* STATES */
+.project:hover .collapse-icon {
+  background-position: 35px 0px;
+}
+
+.project:hover .heading {
+  color: #FEFEFE;
+}
+

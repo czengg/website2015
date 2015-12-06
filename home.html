@@ -1,0 +1,87 @@
+<head>
+  <title>Cindy Zeng</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="home.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/handlebars-v4.0.2.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <h3>CZENGG</h3>
+    <div class="categories">
+      <h3 class="category">DESIGN</h3>
+      <h3 class="category">CODE</h3>
+      <h3 class="category">DO</h3>
+      <h3 class="category">CONTACT</h3>
+    </div>
+  </div>
+  <div class="content">
+    <div class="pagesection introduction">
+      <h4>HELLO,</h4>
+      <h1>My name is <span class="highlight">Cindy Zeng</span>. A <span class="highlight">user experience developer</span> passionate about intuitive user interfaces and front-end technologies. I believe in <span class="highlight">research-driven</span>, <span class="highlight">mobile-first</span> design. Design and development go hand-in-hand; thus, my projects involve work in both design and development. I am a <span class="highlight">javascript</span> fiend and an advocate of <span class="highlight">cross-platform development</span>. </h1>
+      <h1>I'm currently based in <span class="highlight">San Francisco</span>.</h1>
+      <div class="works">
+        <div class="work">
+          <h3>DESIGN WELL.</h3>
+        </div>
+        <div class="work">
+          <h3>CODE SMART.</h3>
+        </div>
+        <div class="work">
+          <h3>DO GOOD.</h3>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="pagesection hci">
+      <h4>selected hci projects</h4>
+      <h1>These projects showcase my ability to work across design and development</h1>
+      <div class="pagesection-content">
+
+      </div>
+    </div>
+    <div class="pagesection design">
+      <h4>selected design projects</h4>
+      <div class="pagesection-content">
+        <div class="project">
+          <h1 class="heading">BNY Mellon</h1>
+          <p class="description">My role as an intern at BNY Mellon was to assist the user experience department on their various projects. Two projects that I had the pleasure of working on was the UX Library and the ADR website.
+
+          The UX Library was an endeavor to bring a comprehensive user experience library that would be utilized for all future applications, giving a central look and feel to all new technologies.
+
+          For the ADR site, I was responsible for helping restructure the popular client-facing site using rapid prototyping tools such as Axure.</p>
+        </div>
+        <div class="project">
+          <h1 class="heading">thelatest</h1>
+        </div>
+      </div>
+    </div> -->
+    <div class="selected-projects-content">
+    </div>
+  </div>
+
+  <template id="selected-projects">
+    {{#each this}}
+    <div class="pagesection">
+      <h4>{{sectionTitle}}</h4>
+      <div class="pagesection-content">
+        {{#each projects}}
+        <div class="project">
+          <div class="heading-container">
+            <h1 class="heading">{{projectTitle}}</h1>
+<!--             <h4 class="subheading">{{subheading}}</h4> -->
+            <div class="collapse-icon"></div>
+          </div>
+          <p class="description">{{projectDesc}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+  </template>
+</body>
