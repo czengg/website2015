@@ -12,6 +12,15 @@ body {
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* COMMON STYLES */
+.button {
+  cursor: pointer;
+}
+
 /* NAVBAR */
 .navbar {
   font-family: Oswald;
@@ -36,14 +45,6 @@ body {
 
 .navbar h3, div {
   display: inline-block;
-}
-
-.navbar .categories {
-  float: right;
-}
-
-.navbar .category {
-  cursor: pointer;
 }
 
 /* STATES */
@@ -96,9 +97,33 @@ body {
   margin: 0;
 }
 
+/* INTRODUCTION */
+.content .button.resume {
+  padding: 0 1em;
+  border: 1px solid #FEFEFE;
+  font-weight: 300;
+}
+
+.content .button.resume a {
+  color: #A4BAD6;
+}
+
+.content .button.resume:hover {
+  background-color: #A4BAD6;
+}
+
+.content .button.resume:hover a {
+  color: #FEFEFE;
+}
+
+/* PROJECT STYLINGS */
+
 .project {
   cursor: pointer;
   width: 100%;
+  display: block;
+  padding: .5em 0;
+  border-bottom: #FEFEFE solid 1px;
 }
 
 .project .heading-container {
@@ -117,11 +142,11 @@ body {
 }
 
 .project .title {
-  width: 50%;
+  flex: 1;
 }
 
 .project .languages {
-  flex: 1;
+  width: 40%;
   display: none;
 }
 
@@ -140,24 +165,6 @@ body {
   width: 35px;
   height: 20px;
   margin: .6em 0;
-}
-
-/* INTRODUCTION */
-.content .introduction .work:hover {
-  color: #FEFEFE;
-  cursor: pointer;
-}
-
-/* WORK */
-
-.project {
-  display: block;
-  padding: .5em 0;
-  border-bottom: #FEFEFE solid 1px;
-}
-
-.project>.description {
-  display: none;
 }
 
 /* STATES */
@@ -181,4 +188,43 @@ body {
 
 .project:hover .more-info, .project:hover .languages, .project:hover .dates {
   display: inline-block;
+}
+
+/* CONTACT */
+.contact-content {
+  display: flex;
+  justify-content: center
+}
+
+.contact-method {
+  color: #7E8FA4;
+  margin: 2em;
+  text-align: center;
+}
+
+.contact-method .icon {
+  height: 75px;
+  width: 75px;
+  background-repeat: no-repeat;
+  background-position: -76px;
+}
+
+.contact-method .email {
+  background-image: url('img/email.png');
+}
+
+.contact-method .linkedin {
+  background-image: url('img/linkedin.png');
+}
+
+.contact-method .twitter {
+  background-image: url('img/twitter.png');
+}
+
+.contact-method:hover .icon {
+  background-position: 0;
+}
+
+.contact-method:hover {
+  color: #FEFEFE;
 }

@@ -115,6 +115,7 @@ var data = {
           title: 'thelatest',
           skillType: 'programs',
           skills: 'Adobe Creative Suite',
+          dates: '2012',
           desc: ''
         }
       ]

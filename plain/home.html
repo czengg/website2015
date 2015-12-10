@@ -16,13 +16,6 @@
   <body>
     <div class="navbar">
       <h3 id="headerText">CZENGG</h3><img class="collapse" src="img/collapse.svg">
-<!--
-      <div class="categories">
-        <h3 class="category">RESUME</h3>
-        <h3 class="category">PROJECTS</h3>
-        <h3 class="category">CONTACT</h3>
-      </div>
--->
     </div>
     <div class="content">
       <div class="pagesection introduction" data-content="czengg">
@@ -30,14 +23,14 @@
         <h1>My name is <span class="highlight">Cindy Zeng</span>. A <span class="highlight">user experience developer</span> passionate about creating intuitive user interfaces. My design philosophy is  <span class="highlight">research-driven</span> and <span class="highlight">mobile-first</span> design. Design and development go hand-in-hand; thus, I take my designs from a sketchpad to the browser myself. I am a <span class="highlight">javascript</span> fiend and a strong believer of <span class="highlight">cross-platform development</span>. </h1>
         <h1>I'm currently based in <span class="highlight">San Francisco</span>.</h1>
         <div class="resume button">
-          <div class="button">
-            <h3>CLICK HERE FOR MY RESUME.</h3>
-          </div>
+          <a class="button" href="resume.pdf">
+            <h3>MY RESUME</h3>
+          </a>
         </div>
       </div>
       <div class="selected-projects-content">
       </div>
-      <div class="contact">
+      <div class="contact-content pagesection">
       </div>
     </div>
 
@@ -82,6 +75,15 @@
           {{/each}}
         </div>
       </div>
+      {{/each}}
+    </template>
+
+    <template id="contact-methods">
+      {{#each this}}
+      <a class="contact-method" href="{{url}}">
+        <div class="{{name}} icon"></div>
+        <h4>{{name}}</h4>
+      </a>
       {{/each}}
     </template>
   </body>

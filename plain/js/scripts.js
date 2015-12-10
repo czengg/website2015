@@ -2,9 +2,11 @@ $(function() {
 
   //render the scene
   var selectedProjectsTemplate = Handlebars.compile($('#selected-projects').html());
+  var contactMethodsTemplate = Handlebars.compile($('#contact-methods').html());
 
   //render
   $('.selected-projects-content').html(selectedProjectsTemplate(data.selectedProjects));
+  $('.contact-content').html(contactMethodsTemplate(data.contact));
 
   //wire it all up
   $(document).ready(function () {
