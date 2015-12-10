@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cindy Zeng</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="home.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/handlebars-v4.0.2.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <h3 id="headerText">CZENGG</h3><img class="collapse" src="img/collapse.svg">
+<!--
+      <div class="categories">
+        <h3 class="category">RESUME</h3>
+        <h3 class="category">PROJECTS</h3>
+        <h3 class="category">CONTACT</h3>
+      </div>
+-->
+    </div>
+    <div class="content">
+      <div class="pagesection introduction" data-content="czengg">
+        <h4>HELLO,</h4>
+        <h1>My name is <span class="highlight">Cindy Zeng</span>. A <span class="highlight">user experience developer</span> passionate about creating intuitive user interfaces. My design philosophy is  <span class="highlight">research-driven</span> and <span class="highlight">mobile-first</span> design. Design and development go hand-in-hand; thus, I take my designs from a sketchpad to the browser myself. I am a <span class="highlight">javascript</span> fiend and a strong believer of <span class="highlight">cross-platform development</span>. </h1>
+        <h1>I'm currently based in <span class="highlight">San Francisco</span>.</h1>
+        <div class="resume button">
+          <div class="button">
+            <h3>CLICK HERE FOR MY RESUME.</h3>
+          </div>
+        </div>
+      </div>
+      <div class="selected-projects-content">
+      </div>
+      <div class="contact">
+      </div>
+    </div>
+
+    <template id="selected-projects">
+      {{#each this}}
+      <div class="pagesection" data-content="{{sectionHeader}}">
+        <h4>{{sectionTitle}}</h4>
+        <h1>
+          {{#each description}}
+          {{#if highlight}}
+            <span class="highlight">{{text}}</span>
+          {{else}}
+            {{text}}
+          {{/if}}
+          {{/each}}
+        </h1>
+        <div class="pagesection-content">
+          {{#each projects}}
+          <div class="project">
+            <div class="heading-container">
+              <div class="title cell">
+                <h1 class="heading">{{title}}</h1>
+                <h5>{{type}}</h5>
+              </div>
+              <div class="languages cell">
+                <h1 class="heading">{{skills}}</h1>
+                <h5>{{skillType}}</h5>
+              </div>
+              <div class="dates cell">
+                <h1 class="heading">{{dates}}</h1>
+                <h5>year</h5>
+              </div>
+              <div class="more-info cell">
+                <div class="collapse-icon"></div>
+
+  <!--              <h1 class="heading plus-icon">+</h1>-->
+                <h5>more</h5>
+              </div>
+            </div>
+            <p class="description">{{desc}}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      {{/each}}
+    </template>
+  </body>
+</html>

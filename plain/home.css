@@ -1,18 +1,37 @@
+html, body {
+
+  height: 100%;
+}
+
+html {
+  background: #0A1023;
+}
+
 body {
-  background: #151517;
+  padding: 0px;
+  margin: 0px;
 }
 
 /* NAVBAR */
 .navbar {
   font-family: Oswald;
   letter-spacing: 2px;
-  margin: 1em 3em 2em 3em;
-  width: calc(100% - 6em);
+  width: calc(100% - 1.5em);
+  background-color: #A4BAD6;
+  position: fixed;
+  z-index: 100;
+  padding: 0 1.5em;
+  cursor: pointer;
+}
+
+.navbar img {
+  margin: 0 0 .2em 0;
 }
 
 .navbar h3 {
-  font-weight: 400;
-  color: #FEFEFE;
+  font-weight: 500;
+  color: #0A0E24;
+  margin: 2em .5em 0 1em;
 }
 
 .navbar h3, div {
@@ -24,21 +43,21 @@ body {
 }
 
 .navbar .category {
-  margin: 1em;
   cursor: pointer;
 }
 
 /* STATES */
 
-.navbar .category:hover {
-  color: #848B93;
+.navbar:hover {
+  background: #848B93;
 }
 
 /* CONTENT HOMEPAGE*/
 
 .content {
   font-family: Didot;
-  color: #848B93;
+  padding: 4em 0;
+  color: #7E8FA4;
   margin: auto 3em;
 }
 
@@ -50,7 +69,7 @@ body {
   margin: .5em auto;
 }
 
-.content h3, h4 {
+.content h3, h4, h5 {
   font-family: Oswald;
   letter-spacing: 2px;
   font-weight: 400;
@@ -65,10 +84,6 @@ body {
   width: 75%;
 }
 
-.content .pagesection:nth-child(even) {
-  float: right;
-}
-
 .pagesection-content {
   width: 100%;
 }
@@ -77,18 +92,54 @@ body {
   display: inline;
 }
 
+.content .pagesection-content h5 {
+  margin: 0;
+}
+
 .project {
   cursor: pointer;
+  width: 100%;
 }
 
 .project .heading-container {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project .cell {
+  position: relative;
+  padding-bottom: 1.5em;
+}
+
+.project .cell h5 {
+  position: absolute;
+  bottom: 0;
+}
+
+.project .title {
+  width: 50%;
+}
+
+.project .languages {
+  flex: 1;
+  display: none;
+}
+
+.project .dates {
+  width: 20%;
+  display: none;
+}
+
+.project .more-info {
+  text-align: center;
+  display: none;
 }
 
 .project .collapse-icon {
   background-image: url('img/rightArrow.png');
   width: 35px;
   height: 20px;
+  margin: .6em 0;
 }
 
 /* INTRODUCTION */
@@ -110,6 +161,16 @@ body {
 }
 
 /* STATES */
+
+
+.selected-projects-content .pagesection .project:hover {
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  width: 133%;
+}
+
 .project:hover .collapse-icon {
   background-position: 35px 0px;
 }
@@ -118,3 +179,6 @@ body {
   color: #FEFEFE;
 }
 
+.project:hover .more-info, .project:hover .languages, .project:hover .dates {
+  display: inline-block;
+}
