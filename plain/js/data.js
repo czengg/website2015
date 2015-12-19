@@ -3,6 +3,7 @@ var data = {
     {
       sectionTitle: 'the intersection of design and code',
       sectionHeader: 'user experience projects',
+      id: 'uxProjects',
       description: [
         {
           highlight: false,
@@ -63,6 +64,7 @@ var data = {
     {
       sectionTitle: 'selected code projects',
       sectionHeader: 'coding projects',
+      id: 'codingProjects',
       projects: [
         {
           type: 'startup',
@@ -101,6 +103,7 @@ var data = {
     {
       sectionTitle: 'selected design projects',
       sectionHeader: 'design projects',
+      id: 'designProjects',
       projects: [
         {
           type: 'company',
@@ -133,6 +136,24 @@ var data = {
     {
       name: 'twitter',
       url: ''
+    }
+  ],
+  mainMenu: [
+    {
+      title: 'RESUME',
+      id: 'resume'
+    },
+    {
+      title: 'USER EXPERIENCE PROJECTS',
+      id: 'uxProjects'
+    },
+    {
+      title: 'CODING PROJECTS',
+      id: 'codingProjects'
+    },
+    {
+      title: 'DESIGN PROJECTS',
+      id: 'designProjects'
     }
   ]
 };

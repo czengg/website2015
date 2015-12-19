@@ -21,6 +21,28 @@ a {
   cursor: pointer;
 }
 
+/* PAGE */
+.page {
+  display: none;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+}
+
+.active-page {
+   display: block;
+}
+
+#main {
+  background: #0A1023;
+}
+
+#project {
+  background: #0A1023;
+  color: white;
+}
+
 /* NAVBAR */
 .navbar {
   font-family: Oswald;
@@ -43,13 +65,25 @@ a {
   margin: 2em .5em 0 1em;
 }
 
-.navbar h3, div {
+.navbar h3, div, .menu {
   display: inline-block;
+}
+
+.navbar div, .navbar .menu {
+  display: flex;
+  align-items: baseline;
+  margin-left: -1.5em;
+  padding-left: 1.5em;
+}
+
+.navbar .main-menu-options {
+  display: none;
+  width: 100%;
 }
 
 /* STATES */
 
-.navbar:hover {
+.navbar .menu:hover, .navbar .nav:hover {
   background: #848B93;
 }
 
@@ -157,7 +191,7 @@ a {
 
 .project .more-info {
   text-align: center;
-  display: none;
+  display: block;
 }
 
 .project .collapse-icon {

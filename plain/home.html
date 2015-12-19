@@ -14,29 +14,48 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class="navbar">
-      <h3 id="headerText">CZENGG</h3><img class="collapse" src="img/collapse.svg">
-    </div>
-    <div class="content">
-      <div class="pagesection introduction" data-content="czengg">
-        <h4>HELLO,</h4>
-        <h1>My name is <span class="highlight">Cindy Zeng</span>. A <span class="highlight">user experience developer</span> passionate about creating intuitive user interfaces. My design philosophy is  <span class="highlight">research-driven</span> and <span class="highlight">mobile-first</span> design. Design and development go hand-in-hand; thus, I take my designs from a sketchpad to the browser myself. I am a <span class="highlight">javascript</span> fiend and a strong believer of <span class="highlight">cross-platform development</span>. </h1>
-        <h1>I'm currently based in <span class="highlight">San Francisco</span>.</h1>
-        <div class="resume button">
-          <a class="button" href="resume.pdf">
-            <h3>MY RESUME</h3>
-          </a>
+    <div class="page active-page" id="main">
+      <div class="navbar">
+        <div class="nav">
+          <h3 id="headerText"></h3><img class="collapse" src="img/collapse.svg">
+        </div>
+        <div class="main-menu-options">
         </div>
       </div>
-      <div class="selected-projects-content">
+      <div class="content">
+        <div class="pagesection introduction" id="czengg" data-content="czengg">
+          <h4>HELLO,</h4>
+          <h1>My name is <span class="highlight">Cindy Zeng</span>. A <span class="highlight">user experience developer</span> passionate about creating intuitive user interfaces. My design philosophy is  <span class="highlight">research-driven</span> and <span class="highlight">mobile-first</span> design. Design and development go hand-in-hand; thus, I take my designs from a sketchpad to the browser myself. I am a <span class="highlight">javascript</span> fiend and a strong believer of <span class="highlight">cross-platform development</span>. </h1>
+          <h1>I'm currently based in <span class="highlight">San Francisco</span>.</h1>
+          <div class="resume button">
+            <a class="button" href="resume.pdf" id="resume">
+              <h3>MY RESUME</h3>
+            </a>
+          </div>
+        </div>
+        <div class="selected-projects-content">
+        </div>
+        <div class="contact-content pagesection">
+        </div>
       </div>
-      <div class="contact-content pagesection">
+    </div>
+    <div class="page" id="project">
+      <div class="navbar">
+        <div class="nav">
+          <h3 id="headerText">CZENGG</h3><img class="collapse" src="img/collapse.svg">
+        </div>
+      </div>
+      <div class="content">
+        <h4 id="projectDate">1984</h4>
+        <h1 id="projectTitle" class="highlight">Zazzle</h1>
+        <div class="media" id="projectMedia"></div>
+        <h1 id="projectDescription">jfkdslfjdsklfjdsklfjkdlsjfkdsjfkldsjflksdjflks</h1>
       </div>
     </div>
 
     <template id="selected-projects">
       {{#each this}}
-      <div class="pagesection" data-content="{{sectionHeader}}">
+      <div class="pagesection" id="{{id}}" data-content="{{sectionHeader}}">
         <h4>{{sectionTitle}}</h4>
         <h1>
           {{#each description}}
@@ -49,7 +68,7 @@
         </h1>
         <div class="pagesection-content">
           {{#each projects}}
-          <div class="project">
+          <div class="project" id="{{title}}">
             <div class="heading-container">
               <div class="title cell">
                 <h1 class="heading">{{title}}</h1>
@@ -84,6 +103,14 @@
         <div class="{{name}} icon"></div>
         <h4>{{name}}</h4>
       </a>
+      {{/each}}
+    </template>
+
+    <template id="menu-options">
+      {{#each this}}
+      <div class="menu" data-content="{{id}}">
+        <h3>{{title}}</h3>
+      </div>
       {{/each}}
     </template>
   </body>
