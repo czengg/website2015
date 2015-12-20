@@ -76,7 +76,7 @@ a {
   padding-left: 1.5em;
 }
 
-.navbar .main-menu-options {
+.navbar .main-menu-options, .navbar .project-menu-options {
   display: none;
   width: 100%;
 }
@@ -85,6 +85,10 @@ a {
 
 .navbar .menu:hover, .navbar .nav:hover {
   background: #848B93;
+}
+
+.navbar .nav.opened .collapse {
+  transform: rotate(180deg);
 }
 
 /* CONTENT HOMEPAGE*/

@@ -30,6 +30,7 @@ var data = {
         {
           type: 'company',
           title: 'Zazzle',
+          id: 'zazzle',
           skillType: 'languages',
           skills: 'Javascript, C#',
           dates: '2015',
@@ -38,6 +39,7 @@ var data = {
         {
           type: 'startup',
           title: 'Roaring Fork LLC',
+          id: 'roaringFork',
           skillType: 'frameworks',
           skills: 'Angular Material',
           dates: '2015',
@@ -46,6 +48,7 @@ var data = {
         {
           type: 'nonprofit',
           title: 'Pittsburgh Parks',
+          id: 'pittsburghParks',
           skillType: 'languages',
           skills: 'Swift',
           dates: '2015',
@@ -54,10 +57,11 @@ var data = {
         {
           title: 'Zero Waste Pittsburgh',
           type: 'nonprofit',
+          id: 'zeroWastePittsburgh',
           skillType: 'frameworks',
           skills: 'Ruby on Rails',
           dates: '2014',
-          desc: ''
+          desc: "Worked with a team to help Zero Waste Pittsburgh integrate technology into their current workflow. With Kyle's help, we were able to understand the needs of the nonprofit and create an application to lessen the burden of the initial waste audit process. The final deliverable reduced turnaround time and wasted energy on this free service."
         }
       ]
     },
@@ -69,6 +73,7 @@ var data = {
         {
           type: 'startup',
           title: 'Canvs',
+          id: 'canvs',
           skillType: 'frameworks',
           skills: 'AngularJS',
           dates: '2014',
@@ -77,6 +82,7 @@ var data = {
         {
           type: 'startup',
           title: 'Drawbridge',
+          id: 'drawbridge',
           skillType: 'languages',
           skills: 'Javascript, PHP',
           dates: '2014',
@@ -85,6 +91,7 @@ var data = {
         {
           type: 'project',
           title: 'fig.',
+          id: 'fig',
           skillType: 'languages',
           skills: 'Python',
           dates: '2013',
@@ -93,6 +100,7 @@ var data = {
         {
           type: 'project',
           title: 'Notetaker',
+          id: 'notetaker',
           skillType: 'languages',
           skills: 'Javascript',
           dates: '2013',
@@ -108,18 +116,20 @@ var data = {
         {
           type: 'company',
           title: 'BNY Mellon',
+          id: 'bnyMellon',
           skillType: 'programs',
           skills: 'Axure',
           dates: '2013',
-          desc: ''
+          desc: 'Worked as a technical intern under the User Experience Department of BNY Mellon. Used software such as Axure, ExtJS, Microsoft Sharepoint, etc. Helped with wireframing, mapping, and designing internal as well as outward facing sites. Contributed in active discussions on current projects.'
         },
         {
           type: 'company',
           title: 'thelatest',
+          id: 'theLatest',
           skillType: 'programs',
           skills: 'Adobe Creative Suite',
           dates: '2012',
-          desc: ''
+          desc: 'Headed by Jeffrey Hall, former VP of Marketing Ser- vices at LA Times. Closely worked with mentors to design, develop, and contribute to marketing decisions during development stages. Contributed to creation of logo, layout, and fundraising efforts.'
         }
       ]
     }

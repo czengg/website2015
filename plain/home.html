@@ -44,10 +44,13 @@
         <div class="nav">
           <h3 id="headerText">CZENGG</h3><img class="collapse" src="img/collapse.svg">
         </div>
+        <div class="project-menu-options">
+        </div>
       </div>
       <div class="content">
-        <h4 id="projectDate">1984</h4>
-        <h1 id="projectTitle" class="highlight">Zazzle</h1>
+        <h4 id="projectDate"></h4>
+        <h1 id="projectTitle" class="highlight"></h1>
+        <h4 id="projectSkills" class="highlight"></h4>
         <div class="media" id="projectMedia"></div>
         <h1 id="projectDescription">jfkdslfjdsklfjdsklfjkdlsjfkdsjfkldsjflksdjflks</h1>
       </div>
@@ -68,7 +71,7 @@
         </h1>
         <div class="pagesection-content">
           {{#each projects}}
-          <div class="project" id="{{title}}">
+          <div class="project" id="{{id}}">
             <div class="heading-container">
               <div class="title cell">
                 <h1 class="heading">{{title}}</h1>
@@ -89,7 +92,6 @@
                 <h5>more</h5>
               </div>
             </div>
-            <p class="description">{{desc}}</p>
           </div>
           {{/each}}
         </div>
